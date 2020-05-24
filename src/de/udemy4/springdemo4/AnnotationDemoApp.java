@@ -36,7 +36,7 @@ public class AnnotationDemoApp {
 		Coach theSoccerCoach = context.getBean("soccerCoach", Coach.class);
 		Coach theBaseballCoach = context.getBean("baseballCoach", Coach.class);
 		Coach theGolfCoach = context.getBean("sebastianTheCoach", Coach.class);
-		
+		Coach theSwimCoach = context.getBean("swimCoach", Coach.class);
 		
 		
 		
@@ -47,6 +47,11 @@ public class AnnotationDemoApp {
 		System.out.println(theBaseballCoach.getDailyWorkout());
 		System.out.println(theGolfCoach.getDailyWorkout());
 		
+		System.out.println("\n==================================> SwimCoach <==================================");
+		System.out.println(theSwimCoach.getDailyWorkout());
+		System.out.println(theSwimCoach.getDailyFortune());
+		System.out.println(theSwimCoach.getEmailAddress());
+		System.out.println(theSwimCoach.getTeam());
 		
 		// >>8x..<< close the context
 		context.close();
@@ -54,6 +59,40 @@ public class AnnotationDemoApp {
 	}
 
 }
+
+
+
+/*
+// load the spring configuration file
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		// retrieve bean from spring container
+		CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);
+		
+		// call methods on the bean
+		// ... let's come back to this ...
+		System.out.println(theCoach.getDailyWorkout());
+		
+		System.out.println(theCoach.getDailyFortune());
+		
+		// call our new methods to get the literal values
+		System.out.println(theCoach.getEmailAddress());
+		
+		System.out.println(theCoach.getTeam());
+		
+		// close the context
+		context.close();
+
+*/
+
+
+
+
+
+
+
+
+
 
 
 

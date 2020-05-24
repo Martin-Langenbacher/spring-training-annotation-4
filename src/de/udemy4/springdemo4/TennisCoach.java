@@ -60,6 +60,20 @@ public class TennisCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 
+	
+	// Not done YET !!!!!!!!!!!!!!!!!!!
+	@Override
+	public String getEmailAddress() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getTeam() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
 
 
