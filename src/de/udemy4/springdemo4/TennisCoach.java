@@ -2,10 +2,12 @@ package de.udemy4.springdemo4;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //@Component("thatSillyCoach")  --> You can here put a specific bean-ID in; the default ID is tennisCoach for the Class "TennisCoach"!
 @Component
+//@Scope("prototype") // prototype: Creates a new instance every time!
 public class TennisCoach implements Coach {
 	
 	// Field injection with '@Autowired'
@@ -17,6 +19,29 @@ public class TennisCoach implements Coach {
 	public TennisCoach() {
 		System.out.println(">> TennisCoach: inside default constructor");
 	}
+	
+	
+	
+	// ==> does not work with newer Java-Versions:
+	
+	/*
+	// define my init method
+	@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println(">> TennisCoach: inside of doMyStartupStuff()");
+	}
+	
+	// define my destroy method
+		@PreDestroy
+		public void doMyCleanupStuff() {
+			System.out.println(">> TennisCoach: inside of doMyCleanupStuff()");
+		}
+	*/
+	
+	
+	
+	
+	
 	
 	// works also with 'doSomeCrazyStuff'-Method ---> needs @Autowired !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	/*
