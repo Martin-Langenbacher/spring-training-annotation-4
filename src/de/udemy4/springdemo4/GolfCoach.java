@@ -10,6 +10,12 @@ public class GolfCoach implements Coach {
 		return "\nSebastian said (again in German): '1000 Abschläge machen!'";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
 
 

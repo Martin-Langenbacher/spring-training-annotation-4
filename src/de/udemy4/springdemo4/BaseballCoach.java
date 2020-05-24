@@ -10,6 +10,12 @@ public class BaseballCoach implements Coach {
 		return "\nThe Baseball trainer is German and said: 'Bitte Körbe üben, üben, üben! 2 Stunden!";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
 
 

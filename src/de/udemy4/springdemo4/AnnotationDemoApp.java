@@ -6,10 +6,10 @@ public class AnnotationDemoApp {
 
 	public static void main(String[] args) {
 		
-		// read spring config file
+		// >>1<<  read spring config file
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		// get the bean from spring container (now with default - not like down with another name!!!)
+		// >>2<<  get the bean from spring container (now with default - not like down with another name!!!)
 		Coach theCoach = context.getBean("tennisCoach", Coach.class);
 		
 		// Default BEAN-ID:
@@ -18,13 +18,18 @@ public class AnnotationDemoApp {
 		// Coach theCoach = context.getBean("thatSillyCoach", Coach.class);
 		
 		
-		// call a method on the bean 
+		// >>3<<  call a method on the bean 
 		System.out.println(theCoach.getDailyWorkout());
+		
+		
+		// >>4<<  call method to get the daily fortune
+		System.out.println(theCoach.getDailyFortune());
 		
 		
 		
 		//=====================================================================================================
-		// soccer & baseball:
+		// soccer & baseball.... 
+		System.out.println("\n\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Additional from me <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 		
 		
 		// get the bean from spring container (default name)
@@ -38,11 +43,12 @@ public class AnnotationDemoApp {
 		
 		// call a method on the bean 
 		System.out.println(theSoccerCoach.getDailyWorkout());
+		System.out.println(theSoccerCoach.getDailyFortune());
 		System.out.println(theBaseballCoach.getDailyWorkout());
 		System.out.println(theGolfCoach.getDailyWorkout());
 		
 		
-		// close the context
+		// >>8x..<< close the context
 		context.close();
 		
 	}
